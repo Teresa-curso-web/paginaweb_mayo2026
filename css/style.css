@@ -1,0 +1,23 @@
+/* Esto es un comentario */
+*{
+    /* font-family: 'Courier New', Courier, monospace; 
+    margin: 5px;
+    padding: 5px;*/
+}
+h1{
+    border: 5px solid rgb(87, 66, 37);
+    /* border-top: 2px solid aqua
+    
+    border_bottom-width: 10px;
+    border_bottom-color: blue;
+    border_bottom_style: solid;
+
+    */
+    border-radius: 20px;
+    /* text-decoration: underline;: sirve para subrayar el texto
+    */
+    text-align: center ;
+}
+p{
+    border-radius: 10px;
+}
