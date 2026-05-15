@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b6babd;
+    color: #333
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Cabecera */
+header {
+    width: 100%;
+    background-color: #6C9DE2;
+    border-bottom: 4px solid rgb(0, 119, 255);
+}
+
+.contenedor-menu {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+nav li {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Contenido principal */
+main {
+    width: 960px;
+    margin: 0px auto;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.imagen-principal {
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+/* articulos */
+.articulo {
+    background-color: #f8fafc;
+    border: 1px solid #dbe2ea;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.articulo h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.articulo h2 a {
+    color: rgb(0, 119, 255);
+}
+
+.articulo p {
+    line-height: 1.7;
+    font-size: 18px;
+    color: #444;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: #6C9DE2;
+    color: white;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-contenido {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.footer-contenido p {
+    margin-bottom: 15px;
+}
+
+.github {
+    color: white;
+    font-size: 26px;
+}
