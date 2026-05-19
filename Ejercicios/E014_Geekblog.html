@@ -1,111 +1,143 @@
 <!DOCTYPE html>
 <html lang="es-ES">
+
 <head>
+    <!-- https://www.w3schools.com/ -->
+     <!-- https://cdnjs.com/libraries/font-awesome -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Geekblog</title>
     <link rel="stylesheet" href="../css/E014_Geekblog.css">
+    <link rel="shortcut icon" href="Img/favicon.svg" type="image/x-icon">
 </head>
+
 <body>
     <!-- Cabecera -->
-     <header>
+    <header>
         <div class="contenedor">
-            <div class="logo">
-            Geekblog
-            </div>
-        <p>Subtitle to describe your blog</p>
+            <p class="logo">
+                <a href=""><img src="Img/brand.svg" alt="">&nbsp;Geekblog</a>
+            </p>
+            <p class="subtitulo">Subtitle to describe your blog</p>
         </div>
-     </header>
-     <!-- Menú -->
-      <nav>
+    </header>
+    <!-- Menú -->
+    <nav>
         <div class="contenedor">
-        <ul>
-            <li>Development</li>
-            <li>Documentation</li>
-            <li>Features</li>
-            <li>Shortcodes</li>
-            <li>Usage</li>
-            <li><i class="fa-brands fa-github"></i>Github Profile</li>
-        </ul>
+            <ul>
+                <li> <a href="">Development</a></li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Shortcodes</a></li>
+                <li><a href="">Usage</a></li>
+                <li><a href=""><i class="fa-brands fa-github"></i> Github Profile</a></li>
+            </ul>
         </div>
-      </nav>
-      <main>
+    </nav>
+    <main>
         <div class="contenedor">
-        <article>
-            <h2>
-                Getting Started
-            </h2>
-            <p>
-                Geekblog is a simple Hugo theme for personal blogs. It is intentionally designed as a fast and lean theme and may not fit the requeriments of complex projects. If a more feature-complete theme is required there are a lot of got alternatives out there. This post helps you to get started with the Geekblog theme, including initial setup and basic configuration.
-            </p>
-            <p class="read-full"><a href="">Read full post</a></p>
-            <p>
-               Updated on May 6, 2026 6 min read Pinned John Doe Sven Special Documentation Usage
-            </p>
-        </article>
-        <article>
-            <h2>
-                Simple Sticky post
-            </h2>
-            <p>
-                Sticky (or pinned) posts can be used to permanently pin important posts to the top of the post list. The implementation is pretty simple and handled by weight: 1 in a post front matter. As there is no other logic to identify sticky posts you should not use negative values for weight as this will result in posts listed earlier.
-            </p>
-            <p class="read-full">
-                <a href="">Read full post</a>
-            </p>
-            <p>
-                Updated on Jun 22, 2023 1 min read Pinned John Doe Documentation Features
-            </p>
-        </article>
-        <article>
-            <h2>
-                Markdown Syntax
-            </h2>
-            <p>
-                This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
-            </p>
-            <p class="read-full">
-                <a href="">Read full post</a>
-            </p>
-            <p>
-                Updated on Nov 5, 2025 3 min read John Doe Documentation
-            </p>
-        </article>
-        <article>
-            <h2>Short Post</h2>
-            <p>
-                Dolor sit, sumo unique argument um no. Gracie nominal id xiv. Romanesque acclimates investiture. Ornateness bland it ex enc, est yeti am bongo detract re. Pro ad prompts feud gait, quid exercise emeritus bis e. In pro quints consequent, denim fastidious copious quo ad. Stet probates in duo.
-            </p>
-            <p>
-                Updated on Sep 23. 2021 1 min read John Doe Development
-            </p>
-        </article>
-         <article>
-            <h2>Audio</h2>
-            <p class="read-full">
-                The audio shortcode allows you to embed audio files.
-            </p>
-            <p class="read-full">
-                <a href="">Read full post</a>
-            </p>
-            <p>
-                Feb 1, 2026 1 min read John Doe Documentation Shortcodes
-            </p>
-        </article>
+            <article>
+                <h2>
+                    Getting Started
+                </h2>
+                <p>
+                    Geekblog is a simple Hugo theme for personal blogs. It is intentionally designed as a fast and lean
+                    theme and may not fit the requeriments of complex projects. If a more feature-complete theme is
+                    required there are a lot of got alternatives out there. This post helps you to get started with the
+                    Geekblog theme, including initial setup and basic configuration.
+                </p>
+                <p class="read-full"><a href="">Read full post &#8594;</a></p>
+                <p>
+                    <i class="fa-regular fa-calendar"></i> Updated on May 6, 2026 &#9201; 6 min read <i class="fa-solid fa-thumbtack"></i> Pinned 
+                    <i class="fa-solid fa-user"></i> <span class="pastilla"><a href="">John Doe</a></span>
+                    <span class="pastilla"><a href="">Sven Special</a></span> 
+                    <i class="fa-solid fa-bookmark"></i> <span class="pastilla"><a href="">Documentation</a></span> 
+                    <span class="pastilla"><a href="">Usage</a></span>
+                </p>
+            </article>
+            <article>
+                <h2>
+                    Simple Sticky post
+                </h2>
+                <p>
+                    Sticky (or pinned) posts can be used to permanently pin important posts to the top of the post list.
+                    The implementation is pretty simple and handled by weight: 1 in a post front matter. As there is no
+                    other logic to identify sticky posts you should not use negative values for weight as this will
+                    result in posts listed earlier.
+                </p>
+                <p class="read-full">
+                    <a href="">Read full post &#8594;</a>
+                </p>
+                <p>
+                    <i class="fa-regular fa-calendar"></i> Updated on Jun 22, 2023 &#9201; 1 min read <i class="fa-solid fa-thumbtack"></i>Pinned 
+                    <i class="fa-solid fa-user"></i> <span class="pastilla"> <a href="">John Doe</a></span> 
+                    <i class="fa-solid fa-bookmark"></i> <span class="pastilla"> <a href="">Documentation</a></span> 
+                    <span class="pastilla"> <a href="">Features</a></span> 
+                </p>
+            </article>
+            <article>
+                <h2>
+                    Markdown Syntax
+                </h2>
+                <p>
+                    This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also
+                    it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+                </p>
+                <p class="read-full">
+                    <a href="">Read full post &#8594;</a>
+                </p>
+                <p>
+                    <i class="fa-regular fa-calendar"></i>Updated on Nov 5, 2025 &#9201; 3 min read 
+                    <i class="fa-solid fa-user"></i> <span class="pastilla"> <a href="">John Doe</a></span>
+                    <i class="fa-solid fa-bookmark"></i> <span class="pastilla"> <a href="">Documentation</a></span> 
+                </p>
+            </article>
+            <article>
+                <h2>Short Post</h2>
+                <p>
+                    Dolor sit, sumo unique argument um no. Gracie nominal id xiv. Romanesque acclimates investiture.
+                    Ornateness bland it ex enc, est yeti am bongo detract re. Pro ad prompts feud gait, quid exercise
+                    emeritus bis e. In pro quints consequent, denim fastidious copious quo ad. Stet probates in duo.
+                </p>
+                <p class="parrafo-solo">
+                    <i class="fa-regular fa-calendar"></i> Updated on Sep 23, 2021 &#9201; 1 min read 
+                    <i class="fa-solid fa-user"></i> <span class="pastilla"><a href="">John Doe</a></span> 
+                    <i class="fa-solid fa-bookmark"></i> <span class="pastilla"><a href="">Development</a></span> 
+                </p>
+            </article>
+            <article>
+                <h2>Audio</h2>
+                <p>
+                    The audio shortcode allows you to embed audio files.
+                </p>
+                <p class="read-full">
+                    <a href="">Read full post &#8594;</a>
+                </p>
+                <p>
+                    <i class="fa-regular fa-calendar"></i> Feb 1, 2026 &#9201; 1 min read 
+                    <i class="fa-solid fa-user"></i> <span class="pastilla"><a href="">John Doe</a></span> 
+                    <i class="fa-solid fa-bookmark"></i> <span class="pastilla"><a href="">Documentation</a></span> 
+                    <span class="pastilla"><a href="">Shortcodes</a></span> 
+                </p>
+            </article>
         </div>
-      </main>
-      <footer>
+    </main>
+    <footer>
         <div class="contenedor">
-        <p>
-            Atom feed About Legal Notice Private Policy
-        </p>
-        <p>
-            Built with Hugo and
-        </p>
+            <p class="pie-enlace">
+                <i class="fa-solid fa-rss"></i> <a href="">Atom feed</a> &nbsp;
+                <i class="fa-regular fa-envelope"></i> <a href="">About</a> &nbsp;
+                <a href="">Legal Notice</a> &nbsp;
+               <a href="">Private Policy</a>
+            </p>
+            <p class="pie-enlace">
+                Built with <a href="">Hugo</a> &nbsp;and <i class="fa-solid fa-heart"></i>
+            </p>
         </div>
-      </footer>
+    </footer>
 </body>
+
 </html>
