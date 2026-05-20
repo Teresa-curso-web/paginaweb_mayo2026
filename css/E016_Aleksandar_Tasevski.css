@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 237);
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed;
+    padding-top: 40px;
+}
+.contenedor{
+    width: 640px;
+    margin: 0 auto;
+}
+.foto-redonda{
+    border-radius: 200px;
+    height: 90px;
+   
+}
+.logo{
+    font-size: 40px;
+    font-weight: 600;
+    font-style: bold;
+    padding-top: 30px;
+}
+.subtitulo{
+    font-size: 20px;
+    font-weight: 400px;
+    color: rgb(156, 154, 154);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.parrafo{
+    line-height: 1.5;
+}
+h2{
+    font-size: 22px;
+    margin-top: 40PX;
+    margin-bottom: 30px;
+}
+.nota{
+    padding-top: 20px;
+    background-color: #e9e7e4;
+    line-height: 1.5;
+    padding: 20px;
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 15px;  
+}
+.nota-final{
+    background-color: #e9e7e4;
+    font-size: 14px;
+    font-style: italic;
+}.pastilla{
+    font-size: 12px;
+    background-color:#e9e7e4;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+section{
+    border-bottom: 1px dashed;
+    padding-bottom: 50px;
+}
+.lista{
+    margin-left: 20px;
+}
+h4{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    padding-left: 10px;
+}
+.final{
+   padding-top: 50px;
+   line-height: 1.5;
+}
+.correo{
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer a{
+    color: black;
+    font-size: 15px;
+}
