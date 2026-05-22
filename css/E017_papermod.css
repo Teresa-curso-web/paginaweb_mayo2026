@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(245,245,245);
+}
+.contenedor{
+    width: 700px;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+nav li{
+    display: inline-block;
+}
+nav li a{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+.imagen{
+    height: 10px;
+}
+h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.linea{
+    padding-bottom: 15px;
+    color: rgb(161, 157, 157);
+    font-size: 16px;
+}
+.enlace{
+    color: black;
+    text-underline-offset: 4px;
+}
+.letra{
+    font-size: 16px;
+}
+.color-grey{
+    color: rgb(161, 157, 157);;
+}
+.icono{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.texto{
+    color: rgb(161, 157, 157);
+    font-size: 14px;
+    line-height: 2;
+}
+.articulo{
+  background-color:white;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 12px;
+  border: 1px solid rgb(202, 198, 198);
+  padding: 20px;
+  margin-top: 40px;
+}
+.articulo:hover{
+    transform: translateY(-10px);                     /*modificacion/movimiento de los elementos*/
+    box-shadow: 0 10px 20px rgba(0,0,0, .2);        /*sombra de los elementos*/
+}
+.a-articulo{
+    text-decoration: none;
+    color: rgb(161, 157, 157);
+}
+.titulo-segundo{
+    color: black;
+    margin-bottom: 10px;
+}
+.nota-pie{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.pie-pagina{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(161, 157, 157);;
+}
+.pie-pagina a{
+    color: rgb(161, 157, 157);
+}
+.pie-pagina a:hover{
+    color: black;
+}
