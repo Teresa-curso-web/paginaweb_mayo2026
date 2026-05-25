@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            front-size: 16px;   /*16px = 1rem  Nosotros elegimos el tamaño del rem*/
+        }
+        .primero{
+            width: 100vw;
+            height: 100vh;
+            background-color: aqua;
+        }
+        .segundo{
+            width: 50%;
+            height: 100px;
+            background-color: rgb(241, 161, 161);
+            padding: 2rem;
+            margin: 1.5rem;
+        }
+        h1{
+            font-size: 3vw;    /* 3% de la altura total en este caso 100% de ancho*/
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="primero">
+        <h1> Estos son 3 rem</h1>
+        <div class="segundo">
+            <p> Esto es medio rem</p>
+           
+        </div>
+    </div>
+</body>
+</html>
