@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 16px;    /* Ajusta los px para escalar toda la página */
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #ecf0f1;
+            color: #34495e
+        }
+
+        /* Contenedor principal para centrar el contenido */
+
+        .main-wrapper{
+            max-width: 50vw;   /*Ancho máximo para el contendo*/
+            margin: 0 auto;    /* Centrar el wrapper*/
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba (0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid blue;
+            overflow: hidden; 
+        }
+
+        /* Cabecera (Header) */
+
+        .main-header{
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 2rem;    /* Espaciado con rem */
+            text-align: center;
+        }
+        .main-header h1{
+            font-size: clamp(2rem, 5vw, 3rem);      /* Título fluido */
+            line-height: 1.2;
+        }
+
+        /* Navegación (Menu)*/
+
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="main-header">
+            <h1>Mi Sitio Web Responsivo con Unidades Relativas</h1>
+        </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Acerca de</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h2>Bienvenidos a Nuestro Contenido Principal</h2>
+            <p>Este es un ejemplo de contenido principal que utiliza unidades relativas para asegurar que el texto sea legible y que el diseño se adapte a diferentes tamaños de pantalla. El "font-size" de este párrafo es de "1.05rem", y su "line-height" es de "1.7" ambos escalando desde el "font-size" base de la página. Hemos limitado su "max-width" a "70 ch" para mantener una longitud de línea óptima.</p>
+            <img src="https://placehold.co/800x400/95a5a6/FFFFFF?text=Contenido+Visual" alt="Imagen de Contenido" class="article-image">
+            <p>
+                La imagen de arriba tiene un "width" del 90% de su contenedor, pero un "max-width" fijo, para que no se extienda demasiado en pantallas muy grandes. Tanto los "padding" como los "margin" de las secciones se han definido con "rem". garantizado que todos los espaciados escalen de manera predecible.
+            </p>
+        </main>
+        <footer class="main-footer">
+            <p> &copy; 2023 Mi Compañia. Todos los derechos reservados.</p>
+            <p>Diseñado con CSS y unidades relativas.</p>
+        </footer>
+    </div>
+</body>
+</html> 
