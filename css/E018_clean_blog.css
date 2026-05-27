@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .imagen{
-        height: 65vh ;
+        height: 55vh ;
         width: 100%;
         background-image: url("https://picsum.photos/1920/1080");
         background-position: center;
@@ -12,44 +12,58 @@
         background-size: cover;
         overflow: hidden;
 }
+.gris{
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.452);
+}
 .contenedor{
-    width: 50vw;
+    width: 35vw;
     margin: 0 auto;
 }
 .contenedor-segundo{
-    width: 55vw;
+    width: 40vw;
     margin: 0 auto;
 }
 nav p{
     font-size: 1.5rem;
     font-weight: bold;
+    padding-top: 1.5rem;
+}
+nav p a{
+    text-decoration: none;
     color: white;
 }
 nav li{
     display: inline-block;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding-right: 1rem;
 }
 nav li a{
     text-decoration: none;
     color: white;
-    padding-right: 1rem;
 }
 .derecha{
     text-align: right;
 }
 h1{
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
     color: white;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 .subtitulo{
+    font-size: 1.5rem;
     text-align: center;
     color: white;
 }
+article{
+    border-bottom: 1px solid grey;
+    margin-bottom: 2rem;
+}
 .titulo-segundo{
-    margin-top: 3rem;
-    font-size: 1.7rem;
+    margin-top: 2rem;
+    font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 0.4rem;
 }
@@ -60,6 +74,44 @@ h1{
 }
 .pie-articulo{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 0.6rem;
+    font-size: 1rem;
+    color: rgb(155, 152, 152);
     margin-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+span a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.pastilla{
+    background-color: rgb(52, 190, 190);
+    border-color: 1px solid rgb(52, 190, 190);
+    padding: 0.75em;
+
+}
+footer{
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.226)
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 0.50rem;
+    background-color: black;
+}
+footer li{
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+footer p{
+    margin: 2rem;
+    font-size: 0.75rem;
+     color: rgb(155, 152, 152);
 }
