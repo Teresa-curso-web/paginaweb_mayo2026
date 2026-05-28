@@ -1,14 +1,20 @@
+html{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(22, 22, 117);
+}
 *{
     margin: 0;
     padding: 0;
 }
 header{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url("../Ejercicios/Img/metro.jpg");
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    margin-bottom: 2rem;
 }
 .fondo-gris{
     height: 100%;
@@ -18,11 +24,80 @@ header{
 .contenedor{
     width: 80vw ;
     margin: 0 auto;
+    text-align: center;
 }
 h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 5rem;
     color: white;
-    text-align: center;
-
+}
+.sombra{
+     text-shadow: 4px 4px 5px #090909;
+}
+.subtitulo{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 4rem;
+}
+.separador{ 
+    width: 8%;                                           /*Ancho deseado*/
+    margin: 20px auto;                                  /*20 px arriba/abajo, auto centra horizontalmente*/
+    border: 0;                                          /*Elimina el borde por defecto del navegador*/
+    border-top: 2px solid white;                     /*Define el grosor y el color del borde superior*/
+    border-bottom: 2px solid #090909;                 /*Define el grosor y el color del borde inferior*/
+}
+header a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+header a:hover{
+    background-color: rgba(54, 54, 83, 0.658)
+}
+header i:hover{
+    transform: scale(1.4);
+}
+.release{
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgb(44, 105, 219);
+    color: rgb(187, 217, 224);
+    margin-bottom: 2rem;
+    padding: 6px 0 6px 6px;
+    font-size: 0.9rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+.release a{
+    text-decoration: none;
+    color: rgb(56, 56, 226);
+}
+.parte-azul{
+    background-color:  rgb(22, 22, 117);
+    padding: 6px;
+    border: 1px solid rgb(60, 60, 233);
+    border-radius: 0 0.3rem 0.3rem 0;
+}
+.parte-azul:hover{
+    background-color:rgb(65, 133, 235); ;
+}
+.parte-azul a:hover{
+    color: white;
+}
+.boton{
+    width: fit-content;
+    margin: 0 auto;
+    background-color:rgb(65, 133, 235);
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem; 
+}
+.boton a{
+    text-decoration: none;
+    color: rgb(22, 22, 117); ;
+}
+.boton:hover{
+    background-color: rgb(10, 97, 228);
 }
