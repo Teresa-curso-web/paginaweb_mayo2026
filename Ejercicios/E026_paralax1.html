@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralax</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+            color: white;
+            position: relative;
+        }
+        .primero{
+            background-image: url("https://picsum.photos/id/29/4000/2670.jpg");
+        }
+        .segundo{
+            background-image: url("https://picsum.photos/id/147/2448/2448.jpg");
+        }
+        .tercero{
+            background-image: url("https://picsum.photos/id/152/3888/2592.jpg");
+        }
+        .cuarto{
+            background-image: url("https://picsum.photos/id/306/1024/768.jpg");
+        }
+        .contenido{
+            width: 40vw;
+            background-color: rgba(0, 0, 0, 0.172);
+            text-align: center;
+            padding: 2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%,-50%);            /* sirve para colocar el contenedor donde quieras, en este caso centrado en la pantalla*/
+            border-radius: 20px;
+            box-shadow: 0 0 10px, 0 0 30px;        
+        }
+        h1{
+            font-size: 5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .arriba{
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.286);
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 3px 6px;
+            z-index: 1000;
+        }
+        .arriba a{
+            color: white;
+            text-decoration: none; 
+        }
+        header{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgba(6, 143, 81, 0.774);       /*rgba(184, 141, 141, 0.774);*/
+            font-size: 4rem;
+            text-align: center;
+            color:white ;      /*rgb(137, 58, 58) ;*/
+            padding-bottom: 1.5rem;
+            padding-top: 1.5rem;
+        }
+        nav{
+            background-color:rgb(0, 81, 30);     /*rgb(137, 90, 118);*/
+            padding: 0.2rem;
+            position: sticky;
+            top: 10px;
+            z-index: 1001;
+        }
+        nav a{
+            text-decoration: none;
+            color:white ;
+            margin-right: 1rem;
+            margin-left: 3rem;
+            font-size: 1.2rem ;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Relájate y Disfruta: Vistas, Fragancias y Sonidos relajantes
+    </header>
+    <nav>
+        <a href="">Inicio</a>
+        <a href="">Paisajes</a>
+        <a href="">Fragancias</a>
+        <a href="">Música</a>
+    </nav>
+    <div class="arriba">
+            <a href="#">Volver</a>
+    </div>
+    <section class="primero" >
+        <div class="contenido">
+            <h1>Soy el primero</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex animi error ea iusto? Voluptate ipsum nemo soluta tempora sunt voluptatibus reiciendis commodi. Quas aliquid sit error unde possimus saepe.
+            </p>
+        </div>
+    </section>
+    <section class="segundo">
+        <div class="contenido">
+        <h1>Soy el segundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In excepturi officiis tenetur dolor dignissimos suscipit porro? Eligendi et sequi incidunt vero temporibus, facilis magni in soluta nesciunt? Expedita, minima architecto?</p>
+    </div>
+    </section>
+        <section class="tercero" >
+            <div class="contenido">
+                <h1>Soy el tercero</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero ratione ipsam nisi alias reprehenderit fuga optio iusto aspernatur! Deleniti quibusdam eveniet, expedita alias rem distinctio quidem et asperiores tempora at?</p>
+            </div>
+    </section>
+    <section class="cuarto">
+        <div class="contenido">
+            <h1>Soy el cuarto</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit omnis vitae cumque ducimus illum doloremque ad expedita ab delectus laborum? Eos, voluptas fuga natus vitae iste praesentium incidunt animi vel?</p>
+        </div>
+    </section>
+  
+    
+</body>
+</html>
