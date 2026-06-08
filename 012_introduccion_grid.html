@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccción a grid css</title>
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+
+        }
+        .contenedor div{
+            border: 1px solid blue;
+            height: 200px;
+        }
+
+        /* Areas */
+        .areas{
+            display: grid;
+            grid-template-areas: 
+            "cabecera cabecera cabecera"
+            "lateral cuerpo cuerpo"
+            "pie pie pie";
+        }
+        .inicio{
+            grid-area: cabecera;
+            height: 100px;
+            background-color: aqua;
+        }
+        .columna1{
+            grid-area: lateral;
+            height: 500px;
+            background-color: rgb(235, 235, 137);
+            
+        }
+        .columna2{
+            grid-area: cuerpo;
+            height: 500px;
+            background-color: green;
+        }
+        .final{
+            grid-area: pie;
+            height: 100px;
+            background-color: rgb(165, 93, 231);
+        }
+    </style>
+</head>
+<body>
+    <div class="areas">
+        <div class="inicio">Cabecera</div>
+        <div class="columna1">lateral</div>
+        <div class="columna2">Cuerpo</div>
+        <div class="final">Pie</div>
+    </div>
+    <div class="contenedor">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>I</div>
+    </div>
+</body>
+</html>
