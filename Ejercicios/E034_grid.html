@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            background-color: black;
+            width: 60%;
+            height: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .contenedor div{
+            /* min-height: 200px;
+            min-width: 100px; */
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .uno{
+           background-image: url("Img/leopardo.png");
+        }
+        .dos{
+            background-image: url("Img/tenedor.png");
+           
+        }
+        .tres{
+            grid-column: 3/5;
+            background-image: url("Img/tercera.png");
+        }
+        .cuatro{
+            grid-row: 2/4 ;
+            background-image: url("Img/fastfood.png");
+        }
+        .cinco{
+            grid-column: 2/4;
+            background-image: url("Img/logo_comida.png");
+        }
+        .seis{
+            background-image: url("Img/repartidor.png");
+        }
+        .siete{
+            grid-column: 2/ span 2;   /* es lo mismo que grid-column: 2/4 */
+            background-image: url("Img/cartel.png");
+        }
+        .ocho{
+            background-image: url("Img/8.png");
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="uno"></div>
+        <div class="dos"></div>
+        <div class="tres"></div>
+        <div class="cuatro"></div>
+        <div class="cinco"></div>
+        <div class="seis"></div>
+        <div class="siete"></div>
+        <div class="ocho"></div>
+    </div>
+</body>
+</html>

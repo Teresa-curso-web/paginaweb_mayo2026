@@ -19,15 +19,18 @@
         /* Areas */
         .areas{
             display: grid;
+            grid-template-columns: minmax(150px, 1fr) 5fr 1fr;
             grid-template-areas: 
             "cabecera cabecera cabecera"
-            "lateral cuerpo cuerpo"
+            "lateral cuerpo derecha"
             "pie pie pie";
         }
         .inicio{
             grid-area: cabecera;
             height: 100px;
             background-color: aqua;
+            grid-column-start: 2;
+            grid-column-end: 3;
         }
         .columna1{
             grid-area: lateral;
@@ -39,6 +42,11 @@
             grid-area: cuerpo;
             height: 500px;
             background-color: green;
+        }
+        .columna3{
+            grid-area: derecha;
+            height: 500px;
+            background-color: brown;
         }
         .final{
             grid-area: pie;
@@ -52,6 +60,7 @@
         <div class="inicio">Cabecera</div>
         <div class="columna1">lateral</div>
         <div class="columna2">Cuerpo</div>
+        <div class="columna3">derecha</div>
         <div class="final">Pie</div>
     </div>
     <div class="contenedor">
