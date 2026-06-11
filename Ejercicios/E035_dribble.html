@@ -8,6 +8,7 @@
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         .contenedor{
             display: grid;
@@ -17,12 +18,15 @@
             width: 80%;
             min-height: 900px;
             margin: 0 auto;
-            background-color: black
+            background-color: black;
+            padding: 1rem;
+            
         }
         .contenedor div{
             background-size: cover;
             background-position: center;
             overflow: hidden;
+            border: 1px solid blue;
           
         }
         .uno{
@@ -40,7 +44,7 @@
             background-image: url("dribble_4.png");
         }
         .cinco{
-            
+            /* grid-row: 2/5; */
             background-image: url("dribble_5.png");
         }
         .seis{
