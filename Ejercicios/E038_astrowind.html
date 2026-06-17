@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Pagina original https://astrowind.vercel.app/about -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AstroWing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .columnas {
+            display: grid;
+            grid-template-columns:
+                minmax(20px, 1fr) minmax(0, 1200px) minmax(20px, 1fr);
+            grid-template-areas:
+                ". contenido .";
+            /* el punto indica una columna en blanco*/
+            margin: 20px 0;
+        }
+
+        .contenido {
+            grid-area: contenido;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+
+        .col-12 {
+            grid-column: span 12;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-3 {
+            grid-column: span 3;
+        }
+
+        .negro {
+            background-color: black;
+            font-size: 1rem;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        div a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .centrado {
+            text-align: center;
+        }
+        .derecha{
+            text-align: right;
+        }
+
+        nav {
+            font-size: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            padding-right: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            font-weight: 700px;
+        }
+        body{
+             background-color: rgb(245, 247, 247);
+        }
+        main{
+            /* background-color: rgb(245, 247, 247); */
+            padding-top: 3rem;
+        }
+        header{
+            position: sticky;
+            top: 0;
+            padding: 1rem 0;
+            background-color: white;
+        }
+        .foto{
+            width: 100%;
+            grid-column: 2/span 10;
+            border-radius: 10px;
+        }
+        .about{
+            color: rgb(43, 43, 214);
+            font-size: 1.3rem;
+            font-weight: bold;
+            grid-column: 3/ span 8;
+        }
+        h1{
+            font-size: 3.5rem;
+            grid-column: 2/ span 10;
+            line-height: 0.95;
+        }
+        .morado{
+            color: blueviolet;
+        }
+        .subtitulo{
+            font-size: 1.7rem;
+            grid-column: 3/ span 8;
+            margin-bottom: 3rem;
+        }
+        .boton{
+            border: 1px solid black;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            margin-left: 1rem;
+        }
+        .numeros{
+            display: grid;
+            grid-template-columns: repeat(12,1fr)
+          
+        }
+        .cifra{
+            grid-column: span 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 2rem;
+            /* border-right: 1px solid black; */
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="negro">
+        <div class="mensaje">New <a href="">Astro v6 is now available! »</a></div>
+        <div class="github"><a href=""><i class="fa-brands fa-github"></i> Start</a> <a href="">5.7k</a></div>
+    </div>
+    <header class="columnas">
+        <nav class="contenido centrado">
+            <div class="logo col-3"><a href="">🚀 AstroWind</a></div>
+            <div class="menu col-6" centrado>
+                <span><a href="">Homes</a></span>
+                <span><a href="">Pages</a></span>
+                <span><a href="">Landing</a></span>
+                <span><a href="">Blog</a></span>
+                <span><a href="">Widgets</a></span>
+            </div>
+            <div class="col-3 derecha">
+                <span><i class="fa-regular fa-sun"></i></span>
+                <span><i class="fa-solid fa-wifi"></i></span>
+                <span class="boton">Download</span>
+            </div>
+
+        </nav>
+    </header>
+    <main class="columnas">
+        <div class="contenido centrado">   
+            <p class="about">ABOUT US</p>
+            <h1>Elevate your online presence with our <span class="morado">Beautiful Website Templates</span> </h1>
+            <p class="subtitulo">Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus. Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.</p>
+            <img class="foto" src="https://picsum.photos/1600/900?viajes" alt="">
+        </div>
+    </main>
+        <section class="columnas">
+            <div class="contenido">
+                <h2 class="col-12 centrado">Statistics about us</h2>
+                <div class="numeros col-12">
+                <div class="cifra"> 
+                    <span> 4</span> 
+                    <span>OFFICES</span> 
+                </div>
+                <div class="cifra">
+                    <span>248</span>
+                    <span>EMPLOYEES</span>
+                </div>
+                <div class="cifra">
+                    <span>12</span>
+                    <span>TEMPLATES</span>
+                </div>
+                <div class="cifra">
+                    <span>24</span>
+                    <span>AWARD</span>
+                </div>
+            </div>
+        </section>
+</body>
+
+</html>
