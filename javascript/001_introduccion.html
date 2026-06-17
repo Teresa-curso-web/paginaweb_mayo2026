@@ -42,6 +42,9 @@
        // let total = precio + precio * IVA;//
         let total = precio * (1 + IVA);
 
+        //----------
+        let anio = 2026;
+
         </script>
 
     <script src="nombre del archivo de javascrip Ej: archivo.js"></script>
@@ -51,7 +54,7 @@
     <button onclick="
         console.log('Estudiante: ' + estudiante); 
         console.log('Materia: ' + asignatura); 
-        console.log('Califiación: ' + nota);">
+        console.log('Calificación: ' + nota);">
         Datos del estudiante
     </button>
     <button onclick="console.log('Area: ' + cuadrado);">
@@ -60,6 +63,106 @@
     <button onclick="console.log(total)">
         IVA
     </button>
+
+    <button onclick="
+            let edad = prompt('Dime tu edad',33);
+            alert('Tu edad es ' + edad);">
+        Pregunta
+    </button>
+    <button onclick="
+            let acuerdo = confirm('¿Está de acuerdo?');
+            alert(acuerdo);">
+        Confirm
+     </button>
+     <br><br>
+    
+        
+Comparación:
+    <ul>
+        <li> Mayor que A > B </li>
+        <li> Menor que A < B</li>
+        <li>Igual A == B</li>
+        <li>Igualdad estricta A === B</li>
+    </ul>
+
+    <button onclick="alert(12 > 10);">
+        Comparación 
+    </button>
+       
+    <button onclick="
+                let ahora = prompt('Dime el año actual', 2026)
+                if(anio == ahora) alert('El año es correcto');">
+        IF
+    </button>
+
+    <button onclick="
+                ahora = prompt('Dime el año actual', 2026)
+                if(anio == ahora) {
+                     alert('El año es correcto');
+                }
+                else{
+                    alert('El año es incorrecto');
+                }">
+        IF ELSE
+    </button>
+    <button onclick="
+                for(let i = 0; i < 10; i ++){
+                    console.log('i: ' + i);
+                }">
+        Bucle For
+    </button>
+     <button onclick="
+                for(let i = 10; i > 0; i --){
+                    console.log('i: ' + i);
+                }">
+        Bucle For decreciente
+    </button>
+     <button onclick="
+                for(let i = 0; i < 100; i += 2){
+                    console.log('i: ' + i);
+                }">
+        Pares 0-100
+    </button>
+        <button onclick="
+                for(let i = 100; i > 0; i -= 2){
+                    console.log('i: ' + i);
+                }">
+        Pares 0-100 decrecientes
+    </button>
+    <button onclick=" 
+                let contador = 0;
+                while (contador < 10) {
+                    console.log('Contador: ' + contador);
+                    contador ++;  
+                }">
+        Bucles While
+    </button>
+    <hr>
+    <h2>Ejercicios</h2>
+    <h4>1. Pedir un número al usuario y decir si es positivo o negativo</h4>
+
+    <button onclick="
+                let numero = prompt ('Dime un numero', 0)
+                if(numero > 0){
+                    alert('El número ' + numero + ' es positivo')
+                }
+                if(numero == 0){
+                    alert('El número es 0')
+                }
+                else{
+                    alert('El número ' + numero + ' es negativo')
+                }">
+        Mayor o Menor
+
+    </button>
+
+
+
+
+
+       
+        
+
 
  
 </body>

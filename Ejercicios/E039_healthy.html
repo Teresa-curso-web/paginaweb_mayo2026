@@ -21,6 +21,7 @@
         .negro {
             background-color: black;
             color: white;
+            font-size: 0.9rem;
         }
 
         .sombra {
@@ -40,6 +41,12 @@
         header a {
             text-decoration: none;
             color: white;
+        }
+        .sombreado a:hover{
+            background-color: rgba(0, 0, 0, 0.884);
+        }
+        .change a:hover{
+            font-size: 1rem;
         }
 
         .centrado {
@@ -175,14 +182,14 @@
         <div class="negro">
             <div class="centrado">
                 <ul>
-                    <li><a href="">CHANGE TEXT SIZE</a></li>
+                    <li class="change"><a href="">CHANGE TEXT SIZE</a></li>
                     <li>Language <a href="">English</a></li>
                 </ul>
             </div>
         </div>
         <div class="sombra">
             <div class="centrado">
-                <ul>
+                <ul class="sombreado">
                     <li><a href="">Contact us</a></li>
                     <li><a href="">FAQs</a></li>
                     <li><a href="">Contacting your health or dental plan</a></li>
