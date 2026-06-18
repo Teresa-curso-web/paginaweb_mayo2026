@@ -138,25 +138,73 @@ Comparación:
         Bucles While
     </button>
     <hr>
-    <h2>Ejercicios</h2>
+<h2>Ejercicios</h2>
     <h4>1. Pedir un número al usuario y decir si es positivo o negativo</h4>
 
     <button onclick="
-                let numero = prompt ('Dime un numero', 0)
+                let numero = prompt ('Dime un número', 0);
                 if(numero > 0){
-                    alert('El número ' + numero + ' es positivo')
-                }
-                if(numero == 0){
-                    alert('El número es 0')
+                    alert('El número ' + numero + ' es positivo');
                 }
                 else{
-                    alert('El número ' + numero + ' es negativo')
+                    if(numero == 0){
+                        alert('El número ' + numero + ' es CERO');
+                    }
+                    else{
+                     alert('El número ' + numero + ' es negativo');
+                    }
                 }">
-        Mayor o Menor
-
+        Mayor o menor
     </button>
 
+    <h4>2. Dada la nota de un examen, calcular la calificación</h4>
 
+    <Button onclick="
+            let nota = prompt ('¿cúal es tu nota de examen?');
+            if(nota < 5){
+                alert('Tu calificación es SUSPENSO');
+            }
+            else{
+                if(nota < 7){
+                    alert('Tu califación es APROBADO');
+                }
+                else{
+                    if(nota < 9){
+                        alert('Tu califación es NOTABLE');
+                    }
+                    else{
+                        alert('Tu califación es SOBRESALIENTE');
+                    }
+                }
+            }">
+        Calificación
+    </Button>
+    <h4>3. Adivina el número: Dado un número, intentar adivinarlo en 5 intentos.</h4>
+        
+    <button onclick="
+            const OBJETIVO = Math.floor(Math.random() *10) +  1;
+            const LIMITE = 5;
+            let acierto = false;
+            let intentos = 1;
+            let numero_candidato = prompt('¿Cuál es el número?');
+            while(acierto == false && intentos < LIMITE){                  /*También se puede poner  !acierto && intentos < LIMITE */
+                if(numero_candidato == OBJETIVO){
+                    acierto = true;
+                    alert('¡¡¡Enhorabuena!!! has acertado');
+                }
+                else{
+                    if(intentos < LIMITE){
+                    numero_candidato = prompt('Has fallado. Inténtalo de nuevo. Te quedan '  + (LIMITE-intentos)  + ' intentos');
+                    }
+                }
+                intentos ++;
+            }
+            if (!acierto){
+                alert('Fin de la partida. El número era ' + OBJETIVO);
+            }
+        ">
+       Adivina el número
+    </button>
 
 
 
