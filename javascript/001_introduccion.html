@@ -44,6 +44,9 @@
 
         //----------
         let anio = 2026;
+        
+        // modo obsoleto //
+        var nombre_variable = 0;
 
         </script>
 
@@ -79,10 +82,10 @@
         
 Comparación:
     <ul>
-        <li> Mayor que A > B </li>
-        <li> Menor que A < B</li>
-        <li>Igual A == B</li>
-        <li>Igualdad estricta A === B</li>
+        <li> Mayor que: A > B </li>
+        <li> Menor que: A < B</li>
+        <li> Igual: A == B</li>
+        <li> Igualdad estricta: A === B</li> 
     </ul>
 
     <button onclick="alert(12 > 10);">
@@ -108,13 +111,16 @@ Comparación:
     <button onclick="
                 for(let i = 0; i < 10; i ++){
                     console.log('i: ' + i);
-                }">
+                }
+                console.log('FIN');">
+               
         Bucle For
     </button>
      <button onclick="
                 for(let i = 10; i > 0; i --){
                     console.log('i: ' + i);
-                }">
+                }
+                console.log('FIN');">
         Bucle For decreciente
     </button>
      <button onclick="
@@ -205,11 +211,27 @@ Comparación:
         ">
        Adivina el número
     </button>
+    <h4>Calcular la suma de los números enteros entre 1 y 100</h4>
 
+    <button onclick="
+            let suma = 0;
+            for(let i = 1; i <= 100; i++){
+                suma += i;         //suma = suma + i //
+            }
+            alert('La Suma es ' + suma);
 
+            //con bucle while//
+            
+            suma= 0;
+            let ct = 1;
+            while(ct <= 100){
+                suma += ct;
+                ct ++;
+            }
+            alert('La suma con WHILE es ' + suma);">
 
-       
-        
+        Suma de 1 al 100
+    </button>
 
 
  

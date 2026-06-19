@@ -18,6 +18,13 @@
         function sumar(a, b){
             return a + b;
         }
+        function sumatorio(inicio, fin){
+            let total = 0;
+            for(let i = inicio; i <=fin; i ++){
+                total = sumar(i, total);
+            }
+            return total;
+        }
 
     </script>
 </head>
@@ -25,14 +32,24 @@
     <button onclick="saludo()">
         Saludo
     </button>
+    
     <button onclick="saludame()">
         Salúdame
     </button>
+
     <button onclick="saludo_param('Teresa', 33)">
         Saludo con parámetros
     </button>
+
     <button onclick="let x = sumar(3, 2); alert(x);">
         Suma 3 + 2
     </button>
+
+    <button onclick="
+        let t = sumatorio(1,100)
+        alert(t);">
+        suma 1 - 100 con función flexible
+    </button>
+
 </body>
 </html>
