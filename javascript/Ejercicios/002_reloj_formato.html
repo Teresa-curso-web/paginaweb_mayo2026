@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj con formato</title>
+
+    <style>
+
+        @font-face {
+            font-family: "seven";
+            src: url("fuentes/fs-sevegment.otf.woff2") format("woff2");
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-family: monospace;
+        }
+        body{
+            background-color: rgba(250, 235, 215, 0.849);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contenedor{
+            width: 700px;
+            border: 10px solid black;
+            background-color: #7fda96;
+            padding: 25px;
+        }
+        .arriba{
+            display: grid;
+            grid-template-columns: 80px 1fr 80px;
+            align-items: center;
+        }
+        .mna{
+            font-size: 70px;
+            /* font-weight: bold; */
+            text-align: center;
+        }
+        .hora_min{
+            display: grid;
+            grid-template-columns: auto 0.55em auto;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "seven", sans-serif;
+            font-size: 150px;
+            text-align: center;
+        }
+        #segundos{
+            font-family: "seven", sans-serif;
+            font-size: 60px;
+        }
+        .linea{
+            height: 3px;
+            background-color: black;
+            margin: 20px 0;
+        }
+        .abajo{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .celda{
+            text-align: center;
+            border-right: 2px solid black;
+        }
+        .celda:last-child{
+            border-right: none;
+        }
+        .etiqueta{
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .valor{
+            font-family: monospace;
+            font-size: 60px;
+        }
+        /* .txt_dia{
+            font-family: monospace;
+            font-size: 70px;
+            font-weight: bold;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="arriba">
+            <div class="mna" id="ampm">AM</div>
+            <div class="hora_min" id="reloj">
+                <span id="horas">00</span>
+                <span id="puntos">:</span>
+                <span id="minutos">00</span>
+            </div>
+            <div id="segundos">00</div>
+        </div>
+        <div class="linea"></div>
+        <div class="abajo">
+            <div class="celda">
+                <div class="etiqueta">DÍA</div>
+                <div id="diames" class ="valor">31</div>
+            </div>
+            <div class="celda">
+                <div class="etiqueta">MES</div>
+                <div id="mes" class ="valor">12</div>
+            </div>
+            <div class="celda">
+                <div class="etiqueta">DIA SEM.</div>
+                <div id="diasem" class ="valor">JUEVES</div>
+            </div>
+        </div>
+           <script>
+
+        let manejador;
+        let mostrar = true;
+
+        function muestra_hora(){
+            let semana = ["DOM","LUN","MAR","MIE","JUE","VIE","SAB"];
+            let anio = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"];
+            let fecha = new Date();
+            let horas = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+
+            if(horas >= 12){
+                document.getElementById('ampm').textContent= 'PM';
+            }
+            else{
+                document.getElementById('ampm').textContent= 'AM'; 
+            }
+
+            let diames = fecha.getDate();
+            let mes = fecha.getMonth();
+            let dia_semana = fecha.getDay();
+            
+            let div_horas = document.getElementById('horas');
+            let div_minutos = document.getElementById('minutos');
+            let div_segundos = document.getElementById('segundos');
+            let div_diames = document.getElementById('diames');
+            let div_mes = document.getElementById('mes');
+            let div_dia_semana = document.getElementById('diasem');
+
+            div_horas.innerHTML = horas.toString().padStart(2,'0');
+            div_minutos.innerHTML = minutos.toString().padStart(2,'0');
+            div_segundos.innerHTML = segundos.toString().padStart(2,'0');
+            div_diames.innerHTML = diames.toString().padStart(2, '0');
+            div_mes.innerHTML = anio[mes];
+            div_dia_semana.innerHTML = semana[dia_semana];
+
+            mostrar = !mostrar;
+            if(mostrar == true){
+                document.getElementById("puntos").style.visibility = "visible";
+            }
+            else
+                document.getElementById("puntos").style.visibility = "hidden";
+           
+
+        }
+        
+        muestra_hora();
+        manejador = setInterval(muestra_hora,1000);
+        
+
+    </script>  
+</body>
+</html>
