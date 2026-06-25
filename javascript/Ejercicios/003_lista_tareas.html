@@ -5,21 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de tareas</title>
     <style>
-        .tachado{
-            text-decoration: line-through;
+        *{
+            margin: 0;
+            padding: 0;
         }
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #559f9d;        /*rgb(200, 224, 216)*/
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .app{
+            min-height: 40vh;
+            min-width: 40vw;;
+            margin: 4rem;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 2rem;
+            background-color: rgb(198, 231, 220);
+        
+        }
+        h1{
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .entrada{
+            padding:20px;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid black;
+    
+        }
+        .entrada input, li input{
+            flex-grow:6;
+            font-size: 1.3rem;
+        }
+       
+        .entrada button{
+            flex-grow: 1.5;
+            font-size: 1.3rem;
+           
+        }
+        ul{
+            margin-top: 1rem;
+        }
+        li{
+            display: grid;
+            grid-template-columns: 1rem 1fr 4rem;
+            align-items: center;
+            gap: 10px;
+
+            list-style: none;
+            line-height: 1.8;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgb(167, 161, 161);
+        }
+           
+        li button{
+            height: fit-content;
+            padding: 3px;
+            font-size: 1.2rem;
+            background-color: #559f9d;
+        }
+        li.tachado span{
+            text-decoration: line-through;
+            color: grey;
+        }
+        /* .tachado{
+            text-decoration: line-through;
+        } */
+
+
+        /*https://desarrolloweb.com/articulos/estilos-css-campos-checkbox*/
+
+
     </style>
 
 </head>
 <body>
     <div class="app">
         <h1>Mi lista de tareas</h1>
+        <div class="entrada">
         <input type="text" name="" id="nueva_tarea" placeholder="Nueva tarea">
         <button onclick="crear_tarea()">Crear</button>
+        </div>
+        <div class="botonera">
+            <button onclick="guardar_lista()">Guardar</button>
+            <button onclick="cargar_lista()">Cargar</button>
+        </div>
 
         <ul id="tareas"></ul>
     </div>
     <script>
+       
         function crear_tarea(){
             const input = document.getElementById("nueva_tarea");
             const texto = input.value;
@@ -43,7 +123,9 @@
             const lista = document.getElementById("tareas");
             lista.appendChild(li);
 
-            input.value = "";   //para limpiar la tarea despues de crearse y poder añadir otra en la caja de texto//                                    
+
+            input.value = "";   //para limpiar la tarea despues de crearse y poder añadir otra en la caja de texto//          
+            input.focus();                          
         }
         function borrar_tarea(boton){
             const li = boton.parentNode;
@@ -59,7 +141,7 @@
             }
         }
         function editar_tarea(span){
-            const text_actual = span.innerHTML;
+            const texto_actual = span.innerHTML;
             const input = document.createElement('input');
             input.type = "text";
             input.value = texto_actual;
@@ -72,9 +154,28 @@
                     span.innerHTML = input.value;
                 }
                 input.parentNode.replaceChild(span, input);
-            };
+            }
             span.parentNode.replaceChild(input, span);
             input.focus();
+        }
+        function guardar_lista(){
+            const tareas = document.getElementById("tareas");
+            let elementos = tareas.getElementsByTagName('span');
+            let lista = [];
+
+            for(let i = 0; i < elementos.length; i ++){
+                lista.push(elementos[i].innerHTML);
+            }
+            localStorage.setItem('mis_tareas',JSON.stringify(lista));
+        }
+        function cargar_lista(){
+            let datos = localStorage.getItem('mis_tareas');
+            let lista_guardada = JSON.parse(datos);
+            
+            for(let i = 0; i < lista_guardada.length; i ++){
+                crear_tarea
+            }
+
         }
     </script>
 </body>
