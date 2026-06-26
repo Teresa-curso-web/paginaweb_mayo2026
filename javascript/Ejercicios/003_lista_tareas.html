@@ -73,6 +73,7 @@
             text-decoration: line-through;
             color: grey;
         }
+        
         /* .tachado{
             text-decoration: line-through;
         } */
@@ -89,27 +90,35 @@
         <h1>Mi lista de tareas</h1>
         <div class="entrada">
         <input type="text" name="" id="nueva_tarea" placeholder="Nueva tarea">
-        <button onclick="crear_tarea()">Crear</button>
+        <button onclick="guardar_tarea()">Crear</button>
         </div>
         <div class="botonera">
             <button onclick="guardar_lista()">Guardar</button>
             <button onclick="cargar_lista()">Cargar</button>
+            <button onclick="limpiar_lista()">Limpiar</button>
         </div>
 
         <ul id="tareas"></ul>
     </div>
     <script>
-       
-        function crear_tarea(){
+        function guardar_tarea(){
             const input = document.getElementById("nueva_tarea");
             const texto = input.value;
+
+            crear_tarea(texto);
+            
+            input.value = "";   //para limpiar la tarea despues de crearse y poder añadir otra en la caja de texto//          
+            input.focus(); 
+        }
+        function crear_tarea(texto_tarea){
+           
             const li = document.createElement('li');
             const check = document.createElement('input');
             check.type = "checkbox";
             check.onclick = function(){alternar(this);}
 
             const span = document.createElement('span');
-            span.innerHTML = texto;
+            span.innerHTML = texto_tarea;
             span.onclick = function(){editar_tarea(this);}
 
             const boton = document.createElement('button');
@@ -123,9 +132,7 @@
             const lista = document.getElementById("tareas");
             lista.appendChild(li);
 
-
-            input.value = "";   //para limpiar la tarea despues de crearse y poder añadir otra en la caja de texto//          
-            input.focus();                          
+                         
         }
         function borrar_tarea(boton){
             const li = boton.parentNode;
@@ -171,11 +178,16 @@
         function cargar_lista(){
             let datos = localStorage.getItem('mis_tareas');
             let lista_guardada = JSON.parse(datos);
+
+            limpiar_lista();
             
             for(let i = 0; i < lista_guardada.length; i ++){
-                crear_tarea
+                crear_tarea(lista_guardada[i]);
             }
-
+        }
+        function limpiar_lista(){
+            const tareas = document.getElementById("tareas");
+            tareas.innerHTML = "";
         }
     </script>
 </body>
